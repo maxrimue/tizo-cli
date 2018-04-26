@@ -9,7 +9,9 @@
 		"email": "mrittmueller@newstore.com",
 		"url": "github.com/maxrimue"
 	},
-	"bin": "cli.js",
+	"bin": {
+		"tizo": "cli.js"
+	},
 	"engines": {
 		"node": ">=6"
 	},
