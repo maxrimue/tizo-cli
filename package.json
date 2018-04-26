@@ -1,6 +1,6 @@
 {
 	"name": "tizo-cli",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "tizo module for the cli",
 	"license": "MIT",
 	"repository": "maxrimue/tizo-cli",
