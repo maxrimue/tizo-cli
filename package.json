@@ -14,10 +14,12 @@
 		"node": ">=6"
 	},
 	"scripts": {
-		"prepublish": "prettier --write package.json",
 		"test": "xo && ava"
 	},
-	"files": ["index.js", "cli.js"],
+	"files": [
+		"index.js",
+		"cli.js"
+	],
 	"keywords": [
 		"cli-app",
 		"cli",
