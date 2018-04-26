@@ -1,0 +1,44 @@
+{
+	"name": "tizo-cli",
+	"version": "0.0.0",
+	"description": "tizo module for the cli",
+	"license": "MIT",
+	"repository": "maxrimue/tizo-cli",
+	"author": {
+		"name": "maxrimue",
+		"email": "mrittmueller@newstore.com",
+		"url": "github.com/maxrimue"
+	},
+	"bin": "cli.js",
+	"engines": {
+		"node": ">=4"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js",
+		"cli.js"
+	],
+	"keywords": [
+		"cli-app",
+		"cli",
+		"tizo",
+		"timezone",
+		"timezones",
+		"time",
+		"convert",
+		"parse"
+	],
+	"dependencies": {
+		"meow": "^5.0.0",
+		"tizo": "^1.0.1"
+	},
+	"devDependencies": {
+		"ava": "^0.25.0",
+		"xo": "^0.20.3"
+	},
+	"xo": {
+		"prettier": true
+	}
+}
