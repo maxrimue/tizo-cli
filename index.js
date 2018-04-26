@@ -28,6 +28,6 @@ module.exports = ({flags, input}) => {
 			print(date.original);
 			break;
 		default:
-			console.error('Unknown format');
+			console.log('Unknown format');
 	}
 };
