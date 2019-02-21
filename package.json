@@ -16,7 +16,7 @@
 		"node": ">=6"
 	},
 	"scripts": {
-		"test": "xo && ava"
+		"test": "prettier --check **/*.js && xo && ava"
 	},
 	"files": [
 		"index.js",
@@ -38,6 +38,7 @@
 	},
 	"devDependencies": {
 		"ava": "^1.1.0",
+		"prettier": "^1.16.4",
 		"xo": "^0.24.0"
 	},
 	"xo": {
