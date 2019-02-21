@@ -1,4 +1,4 @@
-# tizo-cli [![Build Status](https://travis-ci.org/maxrimue/tizo-cli.svg?branch=master)](https://travis-ci.org/maxrimue/tizo-cli) [![Greenkeeper badge](https://badges.greenkeeper.io/maxrimue/tizo-cli.svg)](https://greenkeeper.io/)
+# tizo-cli [![Build Status](https://travis-ci.com/maxrimue/tizo-cli.svg?branch=master)](https://travis-ci.com/maxrimue/tizo-cli) [![Greenkeeper badge](https://badges.greenkeeper.io/maxrimue/tizo-cli.svg)](https://greenkeeper.io/)
 
 > tizo module for the cli
 
