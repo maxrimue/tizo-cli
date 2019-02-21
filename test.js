@@ -3,7 +3,7 @@ import test from 'ava';
 
 test('return correct format', t => {
 	const stdout = execSync('node ./cli.js -f="utc" 12am pdt');
-	t.true(stdout.includes('19:00'));
+	t.true(stdout.includes('07:00'));
 });
 
 test('use standard format if not provided', t => {
