@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict';
-const meow = require('meow');
-const tizoCli = require('.');
+import * as meow from 'meow';
+import tizoCli from './index';
 
 const cli = meow(
 	`
