@@ -1,5 +1,5 @@
 'use strict';
-const tizo = require('tizo');
+import tizo from 'tizo';
 
 function print([hours, minutes]) {
 	let formattedHours = hours;
@@ -15,7 +15,7 @@ function print([hours, minutes]) {
 	console.log(`${formattedHours}:${formattedMinutes}`);
 }
 
-module.exports = ({flags, input}) => {
+export default ({flags, input}) => {
 	const date = tizo(input.join(' '));
 	switch (flags.format) {
 		case 'local':

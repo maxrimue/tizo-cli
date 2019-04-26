@@ -7,20 +7,23 @@
 	"author": {
 		"name": "maxrimue",
 		"email": "mrittmueller@newstore.com",
-		"url": "github.com/maxrimue"
+		"url": "https://github.com/maxrimue"
 	},
 	"bin": {
-		"tizo": "cli.js"
+		"tizo": "out/cli.js"
 	},
 	"engines": {
 		"node": ">=6"
 	},
 	"scripts": {
-		"test": "prettier --check **/*.js && xo && ava"
+		"prettier-fix": "prettier --write *.ts",
+		"test": "prettier --check *.ts && tsc && ava out/test.js",
+		"build": "tsc",
+		"prepublish": "tsc"
 	},
 	"files": [
-		"index.js",
-		"cli.js"
+		"out/index.js",
+		"out/cli.js"
 	],
 	"keywords": [
 		"cli-app",
@@ -37,11 +40,10 @@
 		"tizo": "^2.0.1"
 	},
 	"devDependencies": {
+		"@types/meow": "^5.0.0",
+		"@types/node": "^11.13.8",
 		"ava": "^1.1.0",
 		"prettier": "^1.16.4",
-		"xo": "^0.24.0"
-	},
-	"xo": {
-		"prettier": true
+		"typescript": "^3.3.3333"
 	}
 }
