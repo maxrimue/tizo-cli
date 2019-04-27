@@ -37,7 +37,7 @@
 	],
 	"dependencies": {
 		"meow": "^5.0.0",
-		"tizo": "^2.0.1"
+		"tizo": "^3.0.0"
 	},
 	"devDependencies": {
 		"@types/meow": "^5.0.0",
