@@ -1,33 +1,41 @@
+#!/usr/bin/env node
 'use strict';
 import tizo from 'tizo';
+import chalk from 'chalk';
 
-function print([hours, minutes]) {
-	let formattedHours = hours;
-	if (hours < 10) {
-		formattedHours = String('0' + hours);
+function format(tizoTime: [number, number]): string {
+	let hours = String(tizoTime[0]);
+	if (hours.length === 1) {
+		hours = '0' + hours;
 	}
 
-	let formattedMinutes = minutes;
-	if (minutes < 10) {
-		formattedMinutes = String('0' + minutes);
+	let minutes = String(tizoTime[1]);
+	if (minutes.length === 1) {
+		minutes = '0' + minutes;
 	}
 
-	console.log(`${formattedHours}:${formattedMinutes}`);
+	return `${hours}:${minutes}`;
 }
 
-export default ({flags, input}) => {
-	const date = tizo(input.join(' '));
-	switch (flags.format) {
-		case 'local':
-			print(date.local);
-			break;
-		case 'utc':
-			print(date.utc);
-			break;
-		case 'original':
-			print(date.original);
-			break;
-		default:
-			console.log('Unknown format');
-	}
-};
+const log = console.log;
+const argv = process.argv.splice(2).join(' ');
+if (argv.length === 0) {
+	console.error('No input supplied');
+	process.exit(1);
+}
+
+try {
+	var tizoResult = tizo(argv);
+} catch (error) {
+	console.error(error.message);
+	process.exit(1);
+}
+const {original, local, utc, inputTimezone} = tizoResult;
+
+log();
+log(
+	` ${chalk.blue('original')}   ${format(original)} ${inputTimezone.name ||
+		'Local Time'}`
+);
+log(`    ${chalk.blue('local')}   ${format(local)}`);
+log(`      ${chalk.blue('utc')}   ${format(utc)}`);

@@ -36,6 +36,7 @@
 		"parse"
 	],
 	"dependencies": {
+		"chalk": "^2.4.2",
 		"meow": "^5.0.0",
 		"tizo": "^3.0.0"
 	},
