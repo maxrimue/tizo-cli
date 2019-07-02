@@ -13,7 +13,7 @@
 		"tizo": "out/cli.js"
 	},
 	"engines": {
-		"node": ">=6"
+		"node": ">= 8"
 	},
 	"scripts": {
 		"prettier-fix": "prettier --write *.ts",
